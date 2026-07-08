@@ -7,6 +7,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.LoginPage;
+import pages.ProductsPage;
 
 import javax.xml.datatype.DatatypeFactory;
 import java.time.Duration;
@@ -14,6 +16,8 @@ import java.time.Duration;
 public class BaseClass {
 
     public WebDriver driver;
+    public LoginPage loginPage;
+    public ProductsPage productPage;
 
     @BeforeMethod
     public void openPage(){
@@ -40,12 +44,25 @@ public class BaseClass {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.saucedemo.com/");
+
+        loginPage = new LoginPage(driver);
+        productPage = new ProductsPage(driver);
     }
 
 
     @AfterMethod
     public void closeBrowser(){
         driver.quit();
+    }
+
+
+    public void standardUserLogin() {
+        loginPage.login("standard_user", "secret_sauce");
+    }
+
+    public void addTwoProductsToCart() {
+        productPage.addBackpackToCart();
+        productPage.addBikeLightToCart();
     }
 
 }

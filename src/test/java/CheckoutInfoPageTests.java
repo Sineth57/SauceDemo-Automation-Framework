@@ -11,11 +11,9 @@ public class CheckoutInfoPageTests extends BaseClass {
     @Test
     public void checkInformationTests(){
 
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.login("standard_user", "secret_sauce");
+        standardUserLogin();
+        addTwoProductsToCart();
 
-        ProductsPage productPage = new ProductsPage(driver);
-        productPage.addBackpackToCart();
         productPage.goToCart();
 
         CartPage cartPage = new CartPage(driver);
@@ -42,5 +40,5 @@ public class CheckoutInfoPageTests extends BaseClass {
 
     }
 
-    
+
 }
