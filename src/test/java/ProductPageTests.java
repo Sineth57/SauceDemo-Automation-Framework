@@ -7,7 +7,7 @@ import pages.ProductsPage;
 public class ProductPageTests extends BaseClass {
 
     @Test
-    public void addToCart(){
+    public void productPageTests(){
 
         standardUserLogin();
 

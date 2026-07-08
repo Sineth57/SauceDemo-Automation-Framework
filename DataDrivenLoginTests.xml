@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name = "Login Suite using TestNG Data Provider">
 
-    <listners>
-        <listner class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter" />
-
-    </listners>
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"/>
+    </listeners>
 
     <test name = "LoginDataProviderTest">
         <classes>
