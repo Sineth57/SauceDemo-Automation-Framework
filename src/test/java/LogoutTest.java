@@ -9,8 +9,7 @@ public class LogoutTest extends BaseClass {
     @Test
     public void logoutTest(){
 
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.login("standard_user", "secret_sauce");
+        standardUserLogin();
 
         ProductsPage productsPage = new ProductsPage(driver);
         productsPage.logout();

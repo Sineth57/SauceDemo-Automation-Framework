@@ -9,8 +9,7 @@ public class ProductPageTests extends BaseClass {
     @Test
     public void addToCart(){
 
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.login("standard_user", "secret_sauce");
+        standardUserLogin();
 
         Assert.assertTrue(driver.getCurrentUrl().contains("inventory"), "Login failed, products page not opened");
 
