@@ -17,7 +17,7 @@ public class CheckoutOverviewTests extends BaseClass {
         cartPage.clickCheckout();
 
         CheckoutInfoPage checkoutInfoPage = new CheckoutInfoPage(driver);
-        checkoutInfoPage.fillCheckoutInfo("Sineth", "shashintha", "12345");
+        checkoutInfoPage.fillCheckoutInfo("Sineth", "Shashintha", "12345");
         checkoutInfoPage.clickContinue();
 
 

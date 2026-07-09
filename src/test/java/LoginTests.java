@@ -52,9 +52,9 @@ public class LoginTests extends BaseClass{
         boolean urlVerification = driver.getCurrentUrl().contains("inventory");
 
         if (expectedValidation.equalsIgnoreCase("valid")) {
-            Assert.assertTrue(urlVerification, "Expected login success and navigated to products dashboard");
+            Assert.assertTrue(urlVerification, "Expected login success and navigated to products page");
         } else {
-            Assert.assertFalse(urlVerification, "Expected login failed but navigated to products dashboard");
+            Assert.assertFalse(urlVerification, "Expected login failed but navigated to products page");
         }
     }
 
