@@ -44,6 +44,12 @@ public class ProductsPage {
     @FindBy(id = "react-burger-menu-btn")
     WebElement menuButton;
 
+    @FindBy(className = "title")
+    WebElement productTitle;
+
+    @FindBy(className = "inventory_container")
+    WebElement inventoryContainer;
+
 
     public void addBackpackToCart() {
         backPackAddButton.click();
@@ -71,6 +77,14 @@ public class ProductsPage {
 
     public boolean isRemoveButtonDisplayedForBikeLight() {
         return bikeLightRemoveButton.isDisplayed();
+    }
+
+    public boolean isProductTitleDisplayed() {
+        return productTitle.isDisplayed();
+    }
+
+    public boolean isInventoryPageLoaded() {
+        return inventoryContainer.isDisplayed();
     }
 
     public void logout(){

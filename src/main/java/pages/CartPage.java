@@ -55,4 +55,8 @@ public class CartPage {
     public void clickCheckout() {
         checkoutBtn.click();
     }
+
+   public boolean isProductDisplayed(String productName) {
+        return driver.getPageSource().contains(productName);
+    }
 }
