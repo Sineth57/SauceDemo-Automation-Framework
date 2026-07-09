@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name = "Login Suite using TestNG Data Provider">
+<suite name = "SauceDemo suite">
 
     <listeners>
         <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"/>
+        <listener class-name="base.TestListener"/>
     </listeners>
 
-    <test name = "LoginDataProviderTest">
+    <test name = "E2EPurchaseFlow">
         <classes>
             <class name = "LoginTests"/>
             <class name="ProductPageTests"/>

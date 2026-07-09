@@ -5,6 +5,6 @@ import org.testng.annotations.Listeners;
 
 @Listeners(ExtentITestListenerClassAdapter.class)
 
-public class ListnerClass {
+public class ListenerClass {
 
 }
