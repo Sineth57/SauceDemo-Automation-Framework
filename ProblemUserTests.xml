@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "SauceDemo suite - Edge cases">
+
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"/>
+        <listener class-name="base.TestListener"/>
+    </listeners>
+
+    <test name = "Problem user tests">
+        <classes>
+            <class name = "problemUserTests.productPageTests"/>
+            <class name="problemUserTests.cartPageTests"/>
+            <class name="problemUserTests.checkoutInfoPage"/>
+
+        </classes>
+    </test>
+
+
+</suite>

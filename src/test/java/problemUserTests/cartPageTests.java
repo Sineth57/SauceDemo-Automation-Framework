@@ -2,14 +2,15 @@ package problemUserTests;
 
 import base.BaseClass;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.CartPage;
 import pages.LoginPage;
 import pages.ProductsPage;
 
 public class cartPageTests extends BaseClass {
 
+    @Test
     public void problemUserCartPageIssues(){
-
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("problem_user", "secret_sauce");
