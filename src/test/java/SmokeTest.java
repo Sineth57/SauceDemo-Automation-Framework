@@ -14,10 +14,11 @@ public class SmokeTest extends BaseClass {
         ProductsPage productsPage = new ProductsPage(driver);
         productsPage.addBackpackToCart();
 
+        productsPage.goToCart();
+
         CartPage cartPage = new CartPage(driver);
 
         Assert.assertTrue(cartPage.isBackpackDisplayed());
-        Assert.assertTrue(cartPage.isBikeLightDisplayed());
 
         cartPage.clickCheckout();
 
